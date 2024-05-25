@@ -1,4 +1,4 @@
-# Water Jug Challenge
+# Water Jug Challenge 🚰
 
 <div align="center">
   <a href="https://jug-challenge.vercel.app/" target="_blank" style="font-size: 24px;"><b>DEPLOY 🚀</b></a>
