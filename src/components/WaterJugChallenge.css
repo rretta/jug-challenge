@@ -1,0 +1,64 @@
+.container {
+}
+
+.container-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.container-inputs__input {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-inputs__input label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.container-inputs__input input {
+  width: 15em;
+  height: 2em;
+  text-align: center;
+  border: 0.2em solid #7575ef;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0.2em;
+}
+
+.table-container {
+  text-align: center;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 50%;
+  margin: 2em auto;
+}
+
+.table__header {
+  border: 1px solid #ddd;
+  padding: 8px;
+  background-color: #f2f2f2;
+}
+
+.table__cell {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+button {
+  background-color: #28a745;
+  font-size: 18px;
+  padding: 0.5em 1em;
+  color: rgb(245, 239, 239);
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
