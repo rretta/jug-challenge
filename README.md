@@ -18,14 +18,17 @@ Below are some test cases that can be used to validate the solution:
    - Jug Y Capacity: 5
    - Target Quantity: 4
 
-   ![Test Case 1](assets/ex1.png)
+<img src="https://github.com/rretta/jug-challenge/assets/87555292/98e25e66-4ad6-4c1e-b14b-e564ce135bf3" alt="ex1" width="600"/>
 
 2. **Test Case 2:** \*\*Test Case 2
    - Jug X Capacity: 2
    - Jug Y Capacity: 6
    - Target Quantity: 5
    - Expected result: Impossible solution.
-     ![Test Case 2](assets/ex2.png)
+     
+<img src="https://github.com/rretta/jug-challenge/assets/87555292/f1f886cc-3d04-4cd8-aa9b-746231a7fb16" alt="ex2" width="600"/>
+
+
 
 ## Instruction
 
