@@ -35,56 +35,53 @@ const WaterJugChallenge = () => {
       newSteps.push([action, `X has ${jugXAmount}, Y has ${jugYAmount}`]);
     };
 
-    while (
-      jugXAmount !== targetAmount &&
-      jugYAmount !== targetAmount &&
-      jugXCapacity > jugYCapacity
-    ) {
-      if (jugXAmount === 0) {
-        jugXAmount = jugXCapacity;
-        recordStep(`Fill Jug X with ${jugXCapacity} gallons`);
-      } else if (jugYAmount === jugYCapacity) {
-        jugYAmount = 0;
-        recordStep(`Empty Jug Y (${jugYCapacity} gallons)`);
-      } else {
-        const transferedAmount = Math.min(
-          jugXAmount,
-          jugYCapacity - jugYAmount
-        );
-        jugXAmount -= transferedAmount;
-        jugYAmount += transferedAmount;
-        recordStep(`Transfer ${transferedAmount} gallons from Jug X to Jug Y`);
-      }
+    if (jugXCapacity > jugYCapacity) {
+      while (jugXAmount !== targetAmount && jugYAmount !== targetAmount) {
+        if (jugXAmount === 0) {
+          jugXAmount = jugXCapacity;
+          recordStep(`Fill Jug X with ${jugXCapacity} gallons`);
+        } else if (jugYAmount === jugYCapacity) {
+          jugYAmount = 0;
+          recordStep(`Empty Jug Y (${jugYCapacity} gallons)`);
+        } else {
+          const transferedAmount = Math.min(
+            jugXAmount,
+            jugYCapacity - jugYAmount
+          );
+          jugXAmount -= transferedAmount;
+          jugYAmount += transferedAmount;
+          recordStep(
+            `Transfer ${transferedAmount} gallons from Jug X to Jug Y`
+          );
+        }
 
-      if (jugXAmount === targetAmount || jugYAmount === targetAmount) {
-        break;
+        if (jugXAmount === targetAmount || jugYAmount === targetAmount) {
+          break;
+        }
       }
-    }
+    } else {
+      while (jugYAmount !== targetAmount && jugXAmount !== targetAmount) {
+        if (jugYAmount === 0) {
+          jugYAmount = jugYCapacity;
+          recordStep(`Fill Jug Y with ${jugYCapacity} gallons`);
+        } else if (jugXAmount === jugXCapacity) {
+          jugXAmount = 0;
+          recordStep(`Empty Jug X (${jugXCapacity} gallons)`);
+        } else {
+          const transferedAmount = Math.min(
+            jugYAmount,
+            jugXCapacity - jugXAmount
+          );
+          jugYAmount -= transferedAmount;
+          jugXAmount += transferedAmount;
+          recordStep(
+            `Transfer ${transferedAmount} gallons from Jug Y to Jug X`
+          );
+        }
 
-    //estado reverso (Y > X)
-    while (
-      jugYAmount !== targetAmount &&
-      jugXAmount !== targetAmount &&
-      jugYCapacity > jugXCapacity
-    ) {
-      if (jugYAmount === 0) {
-        jugYAmount = jugYCapacity;
-        recordStep(`Fill Jug Y with ${jugYCapacity} gallons`);
-      } else if (jugXAmount === jugXCapacity) {
-        jugXAmount = 0;
-        recordStep(`Empty Jug X (${jugXCapacity} gallons)`);
-      } else {
-        const transferedAmount = Math.min(
-          jugYAmount,
-          jugXCapacity - jugXAmount
-        );
-        jugYAmount -= transferedAmount;
-        jugXAmount += transferedAmount;
-        recordStep(`Transfer ${transferedAmount} gallons from Jug Y to Jug X`);
-      }
-
-      if (jugYAmount === targetAmount || jugXAmount === targetAmount) {
-        break;
+        if (jugYAmount === targetAmount || jugXAmount === targetAmount) {
+          break;
+        }
       }
     }
 
