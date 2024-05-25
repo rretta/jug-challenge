@@ -3,7 +3,7 @@
 <div align="center">
   <a href="https://jug-challenge.vercel.app/" target="_blank" style="font-size: 24px;"><b>DEPLOY 🚀</b></a>
 </div>
-https://github.com/rretta/jug-challenge/blob/main/src/assets/ex1.png
+
 
 This is a small program that solves the Water Jug Challenge using React. The challenge is to determine if it is possible to measure a certain exact amount of water using two jugs of different capacities.
 
